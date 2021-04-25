@@ -34,10 +34,10 @@ We make the following observations on this campaign data:
 
 ## Analysis one - outcomes for Threatre by launch date
 
-In this analysis exercise, we considered only the **Threatre** campaigns. We want to determine if the **Launch Date** of the Threatre campaigns influences their outcomes.
+In this analysis exercise, we considered only the **threatre** campaigns. We want to determine if the **launch date** of the **threatre** campaigns influences their outcomes.
 
-* First, we constructed a pivot table in which we counted all possible outcome values for every month. 
-* Then, we plotted those outcome results for every month as a **line graph**. 
+* First, we construct a pivot table in which we counted all possible outcome values for every month for the **threatre** category. 
+* Then, we plot those outcome results for every month as a **line graph**. 
 
 The summarized data from the pivot table is below.
 
@@ -57,9 +57,50 @@ The summarized data from the pivot table is below.
 | Dec | 37 | 35 | 3 | 75 |
 
 The graph is shown below.
+
 ![image_name](Theater_Outcomes_vs_Launch.png)
 
 The following inferences can be drawn from the analysis:
 * Threatre campaign outcomes are most successful in the months of May and June. For the month of May, 111 out of 166 campaigns succeeded and for the month of June, 100 out of 153 campaigns succeeded. For these two months, the probability of success is nearly **two thirds**.
 * Conversely, Threatre campaigns were least successful in the month of December. Only 37 of 75 campaigns succeeded, making the success probability only about **half**.
 * It can also be observed that the number of campaigns kicked off were the highest from May-July. However, the number of campaigns kicked off in the **off season months** also remains relatively high.
+
+## Analysis two - outcomes for Plays by goal amount
+
+In this analysis exercise, we consider only the **plays** subcategory. We want to determine if the **goal amount** influences the outcome. The hypothesis is that higher the goal amount, greater the probability of failure.
+
+* First, we construct multiple buckets (categories) for the goal amount starting from **$1000 or less** going up to **$50,000 or more**.
+* Then, for the **plays** subcategory, we count all outcomes for each corresponding bucket of the goal amount.
+* Finally, we plot a line graph of outcomes against the multiple buckets of goal amounts.
+
+The table below contains the success probabilities (the Excel file contains all columns) for each category of goal amount and the total number of campaigns.
+
+| Goal      | Percentage Successful | Total Campaigns |
+| ----------- | ----------- |--------------|
+| Less than 1000 | 75.81% | 186 |
+| 1000 - 4,999 | 72.66% | 534 |
+| 5,000 - 9,999 | 55.03% | 169 |
+| 10,000 - 14,999 | 54.17% | 72 |
+| 15,000 - 19,999 | 50% | 24 |
+| 20,000 - 24,999 | 45% | 20 |
+| 25,000 - 29,999 | 20% | 5 |
+| 30,000 - 34,999 | 27.27% | 11 |
+| 35,000 - 39,999 | 66.67% | 6 |
+| 40,000 - 44,999 | 66.67% | 3 |
+| 45,000 - 49,999 | 0% | 1 |
+| 50,000 and above | 12.5% | 16 |
+
+The graph is shown below.
+
+![image_name](Outcomes_vs_Goals.png)
+
+The following inferences can be drawn from the analysis:
+* As expected, the success probability drops as the goal amount increases.
+* At high campaign amounts, it seems the success probability jumps contrary to our expectations. However, there aren't enough data points to determine the true success probability at those campaigns, and these results should probably be discarded from the analysis.
+* It may also be the case that campaigns aiming to raise high amounts are run more professionally thus raising their chance of succeeding.
+
+## Conclusions
+
+* As analysis two demonstrated the limitations of small sample size at high goal amounts, we need to collect more data to run more analysis.
+* While the data provides some interesting attributes, more attributes could be collected to determine the important factors influencing the outcome. To illustrate this point further, the campaign start date was an important factor, but its relative importance was lesser than the goal amount (here, the success probability started at 75% and gradually reduced to 20%). Are there other important factors such as the goal amount that determine the success of a campaign?
+* As for the analysis, we performed a **retrospective analysis**. While this is good for drawing inferences, it doesn't help much in making decisions. In particular, we could run a **predictive analysis**, where the probability of success could be modeled as a function of various attributes of the data.
