@@ -37,6 +37,29 @@ We make the following observations on this campaign data:
 In this analysis exercise, we considered only the **Threatre** campaigns. We want to determine if the **Launch Date** of the Threatre campaigns influences their outcomes.
 
 * First, we constructed a pivot table in which we counted all possible outcome values for every month. 
-* Then, we plotted those outcome results for every month as a **line graph**. The graph is shown below.
+* Then, we plotted those outcome results for every month as a **line graph**. 
 
+The summarized data from the pivot table is below.
+
+| Month      | Successful Campaigns | Failed Campaigns | Canceled Campaigns | Total |
+| ----------- | ----------- |---------|----------------|-------------|
+| Jan | 56 | 33 | 7 | 96 |
+| Feb | 71 | 39 | 3 | 113 |
+| Mar | 56 | 33 | 3 | 92 |
+| Apr | 71 | 40 | 2 | 113 |
+| May | 111 | 52 | 3 | 166 |
+| Jun | 100 | 49 | 4 | 153 |
+| Jul | 87 | 50 | 1 | 138 |
+| Aug | 72 | 47 | 4 | 123 |
+| Sep | 59 | 34 | 4 | 97 |
+| Oct | 65 | 50 | 0 | 115 |
+| Nov | 54 | 31 | 3 | 88 |
+| Dec | 37 | 35 | 3 | 75 |
+
+The graph is shown below.
 ![image_name](Theater_Outcomes_vs_Launch.png)
+
+The following inferences can be drawn from the analysis:
+* Threatre campaign outcomes are most successful in the months of May and June. For the month of May, 111 out of 166 campaigns succeeded and for the month of June, 100 out of 153 campaigns succeeded. For these two months, the probability of success is nearly **two thirds**.
+* Conversely, Threatre campaigns were least successful in the month of December. Only 37 of 75 campaigns succeeded, making the success probability only about **half**.
+* It can also be observed that the number of campaigns kicked off were the highest from May-July. However, the number of campaigns kicked off in the **off season months** also remains relatively high.
